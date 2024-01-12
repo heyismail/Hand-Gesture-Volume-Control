@@ -1,0 +1,102 @@
++---------------+
+|    Start      |
++---------------+
+        |
+        v
++----------------------+
+|  Import Libraries    |
+|  (cv2, mediapipe,    |
+|   pyautogui)         |
++----------------------+
+        |
+        v
++----------------------+
+|   Open Webcam        |
+| (cv2.VideoCapture(0))|
++----------------------+
+        |
+        v
++----------------------+
+|  Hand Tracking Setup |
+| (mp.solutions.hands) |
++----------------------+
+        |
+        v
++----------------------+
+| Drawing Utils Setup  |
+| (mp.solutions.drawing|
+|          _utils)     |
++----------------------+
+        |
+        v
++----------------------+
+| Continuous Frame Loop|
+|                      |
++----------------------+
+        |
+        v
++----------------------+
+|   Read Frame         |
+|   (my_webcam.read()) |
++----------------------+
+        |
+        v
++----------------------+
+| Preprocess Image     |
+| (Convert BGR to RGB) |
++----------------------+
+        |
+        v
++----------------------+
+|  Hand Landmark       |
+|    Detection         |
+| (my_hands.process)   |
++----------------------+
+        |
+        v
++----------------------+
+| Check for Hands      |
+| (If hands detected)  |
++----------------------+
+        |
+        v
++-----------------------+
+| Draw Landmarks        |
+| (utils.draw_landmarks)|
++-----------------------+
+        |
+        v
++----------------------+
+| Calculate Distance   |
+|  and Volume Adjust   |
+| (pyautogui)          |
++----------------------+
+        |
+        v
++----------------------+
+| Display Image        |
+| (cv2.imshow)         |
++----------------------+
+        |
+        v
++----------------------+
+| Check for Exit       |
+| (Wait for key press) |
++----------------------+
+        |
+        v
++----------------------+
+| Release Resources    |
+| (my_webcam.release())|
++----------------------+
+        |
+        v
++-------------------------+
+| Close Windows           |
+| (cv2.destroyAllWindows) |
++-------------------------+
+        |
+        v
++---------------+
+|     End       |
++---------------+
